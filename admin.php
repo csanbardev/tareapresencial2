@@ -1,6 +1,6 @@
 <?php
   session_start();
-  if(!isset($_SESSION['iniciada'])&&$_SESSION['tipo']!='admin'){
+  if(!isset($_SESSION['iniciada'])||$_SESSION['tipo']!='admin'){
     header("Location: login.php?noiniciada");
   }
 

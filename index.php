@@ -6,7 +6,7 @@
     header("Location: user.php");
   }
   elseif(!$_SESSION['iniciada']){
-    header("Location: login.php");
+    header("Location: login.php?error=noiniciada");
   }else{ // redirige a la página principal de cada tipo
     header("Location: {$_SESSION['tipo']}.php");
   }

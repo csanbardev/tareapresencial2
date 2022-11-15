@@ -1,5 +1,6 @@
 <?php
   require 'frmLogin.php';
+  require 'includes/head.php';
 ?>
 
 
@@ -23,3 +24,6 @@
   <br>
   <input type="submit" name="submit" value="Acceder">
 </form>
+  <br>
+  <?php mostrarError() ?>
+

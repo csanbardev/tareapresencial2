@@ -16,4 +16,3 @@
   <title>Web PHP</title>
 </head>
 
-<button type="submit"><a href="logout.php">Cerrar sesión</a></button>

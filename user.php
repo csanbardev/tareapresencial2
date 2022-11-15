@@ -17,7 +17,7 @@
   }
 ?>
 <?php require 'includes/head.php' ?>
-
+<button type="submit"><a href="logout.php">Cerrar sesión</a></button>
 <?php
   if($_COOKIE['contadorUser']==1){
     echo "<h1>Bienvenido por primera vez, {$usuario}</h1>";

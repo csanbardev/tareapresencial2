@@ -64,4 +64,19 @@
     }
   }
 
+
+
+  function mostrarError(){
+    if(isset($_GET['error'])){
+      if($_GET['error']=='noiniciada'){
+        echo "<br><div class='alert alert-danger'>Inicia sesión primero</div>";
+      }
+      if($_GET['error']=='credenciales'){
+        echo "<br><div class='alert alert-danger'>Credenciales incorrectas</div>";
+      }
+    }
+    
+  }
 ?>
+
+

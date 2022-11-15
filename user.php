@@ -3,7 +3,11 @@
   if(!isset($_COOKIE['abiertaUser'])){
     if(!isset($_SESSION['iniciada'])||$_SESSION['tipo']!='user'){
       header("Location: login.php?noiniciada");
+    }else{
+      $usuario = $_SESSION['usuario'];
     }
+  }else{
+    $usuario = $_COOKIE['abiertaUser'];
   }
 
   
@@ -16,9 +20,9 @@
 
 <?php
   if($_COOKIE['contadorUser']==1){
-    echo "<h1>Bienvenido por primera vez, {$_SESSION['usuario']}</h1>";
+    echo "<h1>Bienvenido por primera vez, {$usuario}</h1>";
   }else{
-    echo "<h1>Hola de nuevo {$_SESSION['usuario']}</h1>";
+    echo "<h1>Hola de nuevo {$usuario}</h1>";
     echo "<h2>Tu última visita fue el {$_COOKIE['ultimaVisitaUser']}</h2>";
     echo "<h2>Visitas: {$_COOKIE['contadorUser']}</h2>";
   }

@@ -1,3 +1,7 @@
+<?php
+  require 'frmLogin.php';
+?>
+
 
 <form action="frmLogin.php" method="post">
   <label for="user">Usuario
@@ -5,7 +9,7 @@
   </label>
   <br>
   <label for="user">Contraseña
-    <input type="text" name="user">
+    <input type="text" name="password">
   </label>
   <br>
   <label for="recordar">Recordar usuario

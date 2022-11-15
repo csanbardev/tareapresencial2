@@ -7,6 +7,6 @@
   }
 
 ?>
-
+<?php require 'includes/head.php' ?>
 <h1>Opción C</h1>
 <button type="submit"><a href="user.php">Volver</a></button>

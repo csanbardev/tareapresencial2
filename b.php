@@ -8,5 +8,6 @@
 
 ?>
 
+<?php require 'includes/head.php' ?>
 <h1>Opción B</h1>
 <button type="submit"><a href="admin.php">Volver</a></button>

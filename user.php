@@ -16,7 +16,7 @@
     header("Location: {$_POST['pagina']}.php");
   }
 ?>
-
+<?php require 'includes/head.php' ?>
 
 <?php
   if($_COOKIE['contadorUser']==1){

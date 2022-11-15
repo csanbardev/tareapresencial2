@@ -15,6 +15,7 @@
   }
 ?>
 
+<?php require 'includes/head.php' ?>
 
 <?php
   if($_COOKIE['contadorAdmin']==1){

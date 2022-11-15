@@ -9,11 +9,18 @@
       $_SESSION['tipo']="administrador";
       $_SESSION['usuario']=$_POST['user'];
 
-      if(isset($_POST['recordar'])){ // si recordar está pulsado, guarda las credenciales
+      // si recordar está pulsado, guarda las credenciales
+      if(isset($_POST['recordar'])){ 
         setcookie("usuario", $_POST['user'], time()+64*64*24*365);
         setcookie("pass", $_POST['password'], time()+64*64*24*365);
       }
       
+      // si pide mantener la sesión abierta
+      if(isset($_POST['abierta'])){
+        setcookie("abiertaAdmin", $_POST['user'], time()+64*64*24*365);
+      }
+
+
       if(!isset($_COOKIE['primeraVisitaAdmin'])){ // si no ha habido una primera visita, la creará
         setcookie("primeraVisitaAdmin", date('d-m-Y'), time()+64*64*24*365);
         setcookie("contadorAdmin", 1, time()+64*64*24*365);
@@ -31,10 +38,15 @@
       $_SESSION['tipo']="user";
       $_SESSION['usuario']=$_POST['user'];
 
-
-      if(isset($_POST['recordar'])){ // si recordar está pulsado, guarda las credenciales
+      // si recordar está pulsado, guarda las credenciales
+      if(isset($_POST['recordar'])){ 
         setcookie("usuario", $_POST['user'], time()+64*64*24*365);
         setcookie("pass", $_POST['password'], time()+64*64*24*365);
+      }
+
+      // si pide mantener la sesión abierta
+      if(isset($_POST['abierta'])){
+        setcookie("abiertaUser", $_POST['user'], time()+64*64*24*365);
       }
 
       if(!isset($_COOKIE['primeraVisitaUser'])){ // si no ha habido una primera visita, la creará

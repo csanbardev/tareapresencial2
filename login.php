@@ -17,7 +17,7 @@
   </label>
   <br>
   <label for="sesion">Mantener sesión iniciada
-    <input type="checkbox" name="iniciada" id="">
+    <input type="checkbox" name="abierta" id="">
   </label>
   <br>
   <br>

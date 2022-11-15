@@ -1,8 +1,12 @@
 <?php
   session_start();
-  if(!isset($_SESSION['iniciada'])||$_SESSION['tipo']!='user'){
-    header("Location: login.php?noiniciada");
+  if(!isset($_COOKIE['abiertaUser'])){
+    if(!isset($_SESSION['iniciada'])||$_SESSION['tipo']!='user'){
+      header("Location: login.php?noiniciada");
+    }
   }
+
+  
 
   if(isset($_POST['submit'])){
     header("Location: {$_POST['pagina']}.php");
